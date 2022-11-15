@@ -1,9 +1,93 @@
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: aqua;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,100;1,200;1,600;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.headerIcons{
-    border: 1px solid red;
+:root {
+  --primary-color: #eebf00;
+  --secondary-color: #232b38;
+  --ternary: #6c6c6c;
+  --danger: #fe4545;
+  --pure: #fefefe;
+  --light: #f0f0f0;
+  --heaven: #ffffff;
+  --footer: #2d333f;
+}
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Raleway";
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+header a {
+  color: var(--pure);
+}
+header {
+  background-color: var(--secondary-color);
+  color: var(--pure);
+}
+header .container {
+  display: flex;
+  padding: 15px 0;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+header ul li,
+header .headerIcons i {
+  display: inline;
+  padding: 5px;
+}
+.headerLogs i {
+  margin-right: 5px;
+}
+.bs-header .container .info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  margin: 20px 0;
+}
+.info a {
+  color: var(--secondary-color);
+}
+.call-sec .call-link {
+  font-weight: bold;
+}
+.bs-header .container .call-sec,
+.work-sec {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.bs-header i {
+  font-size: 25px;
+}
+.work-sec div:first-child h3 {
+  font-weight: bold;
+}
+.work-sec div:last-child h4 {
+  font-weight: 500;
+  color: var(--ternary);
+}
+.fa-clock,
+.fa-phone {
+  font-weight: 900;
+  color: var(--primary-color);
+}
+.work-sec div:first-child,
+.call-sec div:first-child {
+  margin-bottom: 5px;
 }
