@@ -158,6 +158,9 @@ header .headerIcons i {
 }
 
 
+body .head {
+  display: nones;
+}
 
 @media (max-width:900px) {
   .body {
@@ -173,5 +176,9 @@ header .headerIcons i {
 
   .body .head {
     display: none;
+  }
+
+  .body .head {
+    display: block;
   }
 }
