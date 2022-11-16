@@ -26,6 +26,7 @@ body {
 
   overflow-x: hidden;
   overflow-y: scroll;
+  position: relative;
 }
 
 .container {
@@ -71,7 +72,7 @@ header .headerIcons i {
   margin-right: 5px;
 }
 
-.bs-header .container .info {
+.body .bs-header .container .info {
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -91,7 +92,7 @@ header .headerIcons i {
 .work-sec {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .bs-header i {
@@ -120,12 +121,7 @@ header .headerIcons i {
 
 .nav-bar {
   margin-top: 35px;
-
 }
-
-
-
-
 
 .nav-bar nav ul {
   display: flex;
@@ -137,7 +133,7 @@ header .headerIcons i {
 .nav-bar nav ul li a {
   padding: 15px;
   display: block;
-  transition: .3s;
+  transition: 0.3s;
   font-weight: 700;
 }
 
@@ -150,35 +146,65 @@ header .headerIcons i {
   transform: rotate(90deg);
   transform: rotate(90deg);
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .nav-trigger svg:hover {
   color: var(--primary-color);
 }
 
-
-body .head {
-  display: nones;
+body .main-head {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  box-shadow: none;
+}
+body .main-head .bs-header .container {
+  width: 100%;
+}
+body .main-head .container .nav-bar {
+  margin: 5px 0 10px;
+}
+body .main-head .container .nav-bar ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body .main-head .container .info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  padding-left: 15px;
+}
+body .main-head .container .info a,
+body .main-head .container .info h4 {
+  font-size: 0.8em;
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
   .body {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    right: 0;
+    width: 75%;
+    height: 75%;
+    position: fixed;
+    right: -30%;
     top: 50%;
+    z-index: 1;
     transform: translateY(-50%);
     background-color: red;
-
+    box-shadow: 0 3px 10px 0 var(--secondary);
   }
 
   .body .head {
     display: none;
   }
 
-  .body .head {
+  body .main-head {
     display: block;
+  }
+}
+@media (max-width: 450px) {
+  .body {
+    right: -38%;
   }
 }
