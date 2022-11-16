@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,100;1,200;1,600;1,700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --primary-color: #eebf00;
   --secondary-color: #232b38;
@@ -14,16 +16,23 @@
   --heaven: #ffffff;
   --footer: #2d333f;
 }
+
 body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   font-family: "Raleway";
+  background-color: yellow;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
+
 .container {
   width: 80%;
   margin: auto;
 }
+
 a {
   text-decoration: none;
 }
@@ -31,13 +40,20 @@ a {
 li {
   list-style: none;
 }
+
+.head {
+  box-shadow: 4px 2px 5px 0px #888888;
+}
+
 header a {
   color: var(--pure);
 }
+
 header {
   background-color: var(--secondary-color);
   color: var(--pure);
 }
+
 header .container {
   display: flex;
   padding: 15px 0;
@@ -50,9 +66,11 @@ header .headerIcons i {
   display: inline;
   padding: 5px;
 }
+
 .headerLogs i {
   margin-right: 5px;
 }
+
 .bs-header .container .info {
   display: flex;
   justify-content: space-between;
@@ -60,34 +78,100 @@ header .headerIcons i {
   align-items: center;
   margin: 20px 0;
 }
+
 .info a {
   color: var(--secondary-color);
 }
+
 .call-sec .call-link {
   font-weight: bold;
 }
+
 .bs-header .container .call-sec,
 .work-sec {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .bs-header i {
   font-size: 25px;
 }
+
 .work-sec div:first-child h3 {
   font-weight: bold;
 }
+
 .work-sec div:last-child h4 {
   font-weight: 500;
   color: var(--ternary);
 }
+
 .fa-clock,
 .fa-phone {
   font-weight: 900;
   color: var(--primary-color);
 }
+
 .work-sec div:first-child,
 .call-sec div:first-child {
   margin-bottom: 5px;
+}
+
+.nav-bar {
+  margin-top: 35px;
+
+}
+
+
+
+
+
+.nav-bar nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.nav-bar nav ul li a {
+  padding: 15px;
+  display: block;
+  transition: .3s;
+  font-weight: 700;
+}
+
+.nav-bar nav ul li a:hover {
+  background-color: var(--primary-color);
+  color: var(--pure);
+}
+
+.nav-trigger svg {
+  transform: rotate(90deg);
+  transform: rotate(90deg);
+  cursor: pointer;
+  transition: .3s;
+}
+
+.nav-trigger svg:hover {
+  color: var(--primary-color);
+}
+
+
+
+@media (max-width:900px) {
+  .body {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: red;
+
+  }
+
+  .body .head {
+    display: none;
+  }
 }
