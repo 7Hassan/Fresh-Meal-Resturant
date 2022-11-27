@@ -269,6 +269,7 @@ body .main-head .container .info h4 {
   padding-right: 10px;
 }
 .plate-price {
+  font-weight: 550;
   color: var(--danger);
 }
 .carousel-cell .plate-carte-div div i {
