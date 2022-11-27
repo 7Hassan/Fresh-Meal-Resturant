@@ -184,7 +184,7 @@ body .main-head .container .info h4 {
 
 @media (max-width: 900px) {
   .body {
-    width: 75%;
+    /* width: 75%; */
     height: 75%;
     position: fixed;
     right: -30%;
@@ -209,12 +209,11 @@ body .main-head .container .info h4 {
   }
 }
 
-/* top products se */
+/* top products sec */
 
 .top-products-sec {
   width: 100%;
-  height: 100vh;
-  padding: 40 0;
+  padding: 40px 0;
   background: var(--light);
   display: flex;
   flex-direction: column;
@@ -236,41 +235,33 @@ body .main-head .container .info h4 {
   background-position: center;
   margin-top: 10px;
 }
-.carosuel {
-  width: 80%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  gap: 60px;
-}
-.carosuel .container {
-  display: flex;
-  gap: 20px;
-  overflow: auto;
-  white-space: nowrap;
-  padding: 10px 0;
-}
-.carosuel .carosuel-div {
+.carousel-cell {
+  margin-right: 2em;
+  border-radius: 10px;
   display: flex;
   flex-flow: column nowrap;
-  gap: 20px;
+  gap: 1.5em;
+  background-color: #b5b5b526;
+}
+
+.carousel-cell.is-selected {
   background: var(--pure);
 }
 
-.carosuel .carosuel-div .plate-img {
+.carousel-cell .plate-img {
   padding: 20px 30px;
   display: flex;
   justify-content: center;
   border-bottom: 2px solid var(--light);
 }
-.carosuel .carosuel-div .plate-info {
+.carousel-cell .plate-info {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   gap: 10px;
   padding: 0 20px 20px;
 }
-.carosuel .carosuel-div .plate-carte-div {
+.carousel-cell .plate-carte-div {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -280,49 +271,52 @@ body .main-head .container .info h4 {
 .plate-price {
   color: var(--danger);
 }
-.carosuel .carosuel-div .plate-carte-div div i {
+.carousel-cell .plate-carte-div div i {
   background-color: var(--primary-color);
   color: var(--heaven);
   padding: 5px;
 }
-.carosuel .carosuel-div .plate-info .plate-name {
+.carousel-cell .plate-info .plate-name {
   font-size: 1.3rem;
   font-weight: 700;
 }
-.carosuel .carosuel-div .plate-info .add-to-cart-div {
+.carousel-cell .plate-info .add-to-cart-div {
   cursor: pointer;
   transition: 0.1s ease;
 }
-.carosuel .carosuel-div .plate-info .plate-carte-div:hover {
+.carousel-cell .plate-info .plate-carte-div:hover {
   background-color: var(--primary-color);
   color: var(--pure);
 }
 .top-products-sec .view-more-btn {
   cursor: pointer;
+  border: 1px solid var(--secondary-color);
   font-size: 1.2em;
   background: var(--secondary-color);
   color: var(--heaven);
-  padding: 10px;
+  padding: 9px;
   border-radius: 5px;
   transition: 0.4s ease;
+  margin-top: 1.2em;
 }
 .top-products-sec .view-more-btn:hover {
   background-color: var(--heaven);
   color: var(--secondary-color);
 }
-.prev,
-.next {
-  cursor: pointer;
-  width: auto;
-  padding: 10px 12px;
-  color: white;
-  font-size: 15px;
-  transition: 0.4s ease;
-  border-radius: 5px;
-  user-select: none;
-  background-color: var(--primary-color);
+/* smaller, dark, rounded square */
+.flickity-button {
+  background: var(--primary-color);
 }
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.flickity-button:hover {
+  background: var(--secondary-color);
+}
+
+.flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+/* icon color */
+.flickity-button-icon {
+  fill: white;
 }
