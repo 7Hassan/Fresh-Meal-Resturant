@@ -23,14 +23,13 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: "Raleway";
   background-color: var(--light);
-
   overflow-x: hidden;
   overflow-y: scroll;
   position: relative;
 }
 
 .container {
-  width: 70%;
+  width: 75%;
   margin: auto;
 }
 
@@ -182,9 +181,8 @@ body .main-head .container .info h4 {
   font-size: 0.8em;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .body {
-    /* width: 75%; */
     height: 75%;
     position: fixed;
     right: -30%;
@@ -202,6 +200,19 @@ body .main-head .container .info h4 {
   body .main-head {
     display: block;
   }
+
+  /* media queiry for about-fresh-meal-sec */
+  .about-fresh-meal-sec .container {
+    flex-flow: column nowrap;
+    gap: 1em;
+  }
+  .container {
+    width: 90%;
+  }
+  .about-sec-img img {
+    width: 90%;
+    margin: auto;
+  }
 }
 @media (max-width: 450px) {
   .body {
@@ -210,7 +221,6 @@ body .main-head .container .info h4 {
 }
 
 /* top products sec */
-
 .top-products-sec {
   width: 100%;
   padding: 40px 0;
@@ -292,8 +302,7 @@ body .main-head .container .info h4 {
   background-color: var(--primary-color);
   color: var(--pure);
 }
-.top-products-sec .view-more-btn,
-.read-more-btn {
+.secondary-button {
   cursor: pointer;
   border: 1px solid var(--secondary-color);
   font-size: 1.2em;
@@ -304,8 +313,7 @@ body .main-head .container .info h4 {
   transition: 0.4s ease;
   margin-top: 1.2em;
 }
-.top-products-sec .view-more-btn:hover,
-.read-more-btn:hover {
+.secondary-button:hover {
   background-color: var(--heaven);
   color: var(--secondary-color);
 }
@@ -334,29 +342,21 @@ body .main-head .container .info h4 {
 }
 .about-fresh-meal-sec .container {
   display: flex;
-  gap: 2.5em;
+  gap: 1.5em;
   align-items: center;
-  /* justify-content: center; */
-  /* margin: 2em 0 0 0; */
   margin-top: 2em;
 }
-.about-sec-img img {
-  width: 470px;
-  height: 350px;
+.about-sec-img {
+  /* width: 119px; */
+  display: flex;
 }
+
 .about-sec-info {
-  /* display: flex; */
-  /* flex-flow: column; */
-  /* gap: 2em; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* flex: 2; */
-  /* width: 1100; */
   padding: 2em 0;
 }
 .about-sec-info h2 {
   font-size: 1.4rem;
-  color: var(--secondary);
+  color: var(--secondary-color);
   margin-bottom: 2rem;
   line-height: 1.3;
   margin-bottom: 1em;
@@ -364,7 +364,4 @@ body .main-head .container .info h4 {
 .about-sec-info p {
   line-height: 1.7;
   margin-bottom: 4rem;
-}
-.about-sec-img {
-  /* padding: 0 3em; */
 }
