@@ -22,7 +22,7 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   font-family: "Raleway";
-  background-color: yellow;
+  background-color: var(--light);
 
   overflow-x: hidden;
   overflow-y: scroll;
@@ -30,7 +30,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 70%;
   margin: auto;
 }
 
@@ -220,12 +220,15 @@ body .main-head .container .info h4 {
   align-items: center;
   gap: 20px;
 }
-.top-products-header {
+.top-products-header,
+.about-sec-header {
   width: 100%;
   text-align: center;
-  font-size: 1.7em;
+  font-size: 1.5em;
+  margin-top: 1.5em;
 }
-.top-products-header::after {
+.top-products-header::after,
+.about-sec-header::after {
   content: "";
   display: block;
   width: 100%;
@@ -289,7 +292,8 @@ body .main-head .container .info h4 {
   background-color: var(--primary-color);
   color: var(--pure);
 }
-.top-products-sec .view-more-btn {
+.top-products-sec .view-more-btn,
+.read-more-btn {
   cursor: pointer;
   border: 1px solid var(--secondary-color);
   font-size: 1.2em;
@@ -300,7 +304,8 @@ body .main-head .container .info h4 {
   transition: 0.4s ease;
   margin-top: 1.2em;
 }
-.top-products-sec .view-more-btn:hover {
+.top-products-sec .view-more-btn:hover,
+.read-more-btn:hover {
   background-color: var(--heaven);
   color: var(--secondary-color);
 }
@@ -320,4 +325,46 @@ body .main-head .container .info h4 {
 /* icon color */
 .flickity-button-icon {
   fill: white;
+}
+
+/* About Fresh Meal sec */
+.about-fresh-meal-sec {
+  background-color: var(--pure);
+  padding: 2.5em 0;
+}
+.about-fresh-meal-sec .container {
+  display: flex;
+  gap: 2.5em;
+  align-items: center;
+  /* justify-content: center; */
+  /* margin: 2em 0 0 0; */
+  margin-top: 2em;
+}
+.about-sec-img img {
+  width: 470px;
+  height: 350px;
+}
+.about-sec-info {
+  /* display: flex; */
+  /* flex-flow: column; */
+  /* gap: 2em; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* flex: 2; */
+  /* width: 1100; */
+  padding: 2em 0;
+}
+.about-sec-info h2 {
+  font-size: 1.4rem;
+  color: var(--secondary);
+  margin-bottom: 2rem;
+  line-height: 1.3;
+  margin-bottom: 1em;
+}
+.about-sec-info p {
+  line-height: 1.7;
+  margin-bottom: 4rem;
+}
+.about-sec-img {
+  /* padding: 0 3em; */
 }
