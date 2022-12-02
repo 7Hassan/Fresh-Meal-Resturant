@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,100;1,200;1,600;1,700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
+  font: inherit;
   box-sizing: border-box;
 }
-
 :root {
   --primary-color: #eebf00;
   --secondary-color: #232b38;
@@ -16,10 +15,15 @@
   --heaven: #ffffff;
   --footer: #2d333f;
 }
-
+img,
+svg,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+}
 body {
-  margin: 0;
-  padding: 0;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   font-family: "Raleway";
   background-color: var(--light);
@@ -27,50 +31,43 @@ body {
   overflow-y: scroll;
   position: relative;
 }
-
 .container {
-  width: 75%;
+  width: 83%;
   margin: auto;
 }
-
+.tittle {
+  font-weight: 700;
+}
 a {
   text-decoration: none;
 }
-
 li {
   list-style: none;
 }
-
 .head {
   box-shadow: 4px 2px 5px 0px #888888;
 }
-
 header a {
   color: var(--pure);
 }
-
 header {
   background-color: var(--secondary-color);
   color: var(--pure);
 }
-
 header .container {
   display: flex;
   padding: 15px 0;
   justify-content: space-between;
   gap: 20px;
 }
-
 header ul li,
 header .headerIcons i {
   display: inline;
   padding: 5px;
 }
-
 .headerLogs i {
   margin-right: 5px;
 }
-
 .body .bs-header .container .info {
   display: flex;
   justify-content: space-between;
@@ -78,80 +75,65 @@ header .headerIcons i {
   align-items: center;
   margin: 20px 0;
 }
-
 .info a {
   color: var(--secondary-color);
 }
-
 .call-sec .call-link {
   font-weight: bold;
 }
-
 .bs-header .container .call-sec,
 .work-sec {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-
 .bs-header i {
   font-size: 25px;
 }
-
 .work-sec div:first-child h3 {
   font-weight: bold;
 }
-
 .work-sec div:last-child h4 {
   font-weight: 500;
   color: var(--ternary);
 }
-
 .fa-clock,
 .fa-phone {
   font-weight: 900;
   color: var(--primary-color);
 }
-
 .work-sec div:first-child,
 .call-sec div:first-child {
   margin-bottom: 5px;
 }
-
 .nav-bar {
   margin-top: 35px;
 }
-
 .nav-bar nav ul {
   display: flex;
   align-items: center;
   gap: 20px;
   justify-content: center;
 }
-
 .nav-bar nav ul li a {
   padding: 15px;
   display: block;
   transition: 0.3s;
   font-weight: 700;
 }
-
 .nav-bar nav ul li a:hover {
   background-color: var(--primary-color);
   color: var(--pure);
 }
-
 .nav-trigger svg {
   transform: rotate(90deg);
   transform: rotate(90deg);
   cursor: pointer;
   transition: 0.3s;
 }
-
 .nav-trigger svg:hover {
   color: var(--primary-color);
 }
-
 body .main-head {
   display: none;
   height: 100vh;
@@ -180,7 +162,6 @@ body .main-head .container .info a,
 body .main-head .container .info h4 {
   font-size: 0.8em;
 }
-
 @media (max-width: 950px) {
   .body {
     height: 75%;
@@ -192,15 +173,12 @@ body .main-head .container .info h4 {
     background-color: red;
     box-shadow: 0 3px 10px 0 var(--secondary);
   }
-
   .body .head {
     display: none;
   }
-
   body .main-head {
     display: block;
   }
-
   /* media queiry for about-fresh-meal-sec */
   .about-fresh-meal-sec .container {
     flex-flow: column nowrap;
@@ -219,7 +197,6 @@ body .main-head .container .info h4 {
     right: -38%;
   }
 }
-
 /* top products sec */
 .top-products-sec {
   width: 100%;
@@ -256,11 +233,9 @@ body .main-head .container .info h4 {
   gap: 1.5em;
   background-color: #b5b5b526;
 }
-
 .carousel-cell.is-selected {
   background: var(--pure);
 }
-
 .carousel-cell .plate-img {
   padding: 20px 30px;
   display: flex;
@@ -271,8 +246,10 @@ body .main-head .container .info h4 {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  gap: 10px;
+  gap: 0.6em;
   padding: 0 20px 20px;
+  /* margin-bottom: 12px;
+	*/
 }
 .carousel-cell .plate-carte-div {
   display: flex;
@@ -292,7 +269,6 @@ body .main-head .container .info h4 {
 }
 .carousel-cell .plate-info .plate-name {
   font-size: 1.3rem;
-  font-weight: 700;
 }
 .carousel-cell .plate-info .add-to-cart-div {
   cursor: pointer;
@@ -301,6 +277,10 @@ body .main-head .container .info h4 {
 .carousel-cell .plate-info .plate-carte-div:hover {
   background-color: var(--primary-color);
   color: var(--pure);
+}
+.plate-rating {
+  display: flex;
+  gap: 0.5em;
 }
 .secondary-button {
   cursor: pointer;
@@ -312,6 +292,7 @@ body .main-head .container .info h4 {
   border-radius: 5px;
   transition: 0.4s ease;
   margin-top: 1.2em;
+  font-weight: 600;
 }
 .secondary-button:hover {
   background-color: var(--heaven);
@@ -324,7 +305,6 @@ body .main-head .container .info h4 {
 .flickity-button:hover {
   background: var(--secondary-color);
 }
-
 .flickity-prev-next-button {
   width: 30px;
   height: 30px;
@@ -334,7 +314,6 @@ body .main-head .container .info h4 {
 .flickity-button-icon {
   fill: white;
 }
-
 /* About Fresh Meal sec */
 .about-fresh-meal-sec {
   background-color: var(--pure);
@@ -347,16 +326,17 @@ body .main-head .container .info h4 {
   margin-top: 2em;
 }
 .about-sec-img {
+  flex: 1;
   display: flex;
+  justify-content: center;
 }
-
 .about-sec-info {
   padding: 2em 0;
+  flex: 1;
 }
 .about-sec-info h2 {
   font-size: 1.4rem;
   color: var(--secondary-color);
-  margin-bottom: 2rem;
   line-height: 1.3;
   margin-bottom: 1em;
 }
