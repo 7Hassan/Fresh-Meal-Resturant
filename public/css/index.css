@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,100;1,200;1,600;1,700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   font: inherit;
   box-sizing: border-box;
 }
+
 :root {
   --primary-color: #eebf00;
   --secondary-color: #232b38;
@@ -15,6 +17,7 @@
   --heaven: #ffffff;
   --footer: #2d333f;
 }
+
 img,
 svg,
 picture,
@@ -22,6 +25,7 @@ video {
   display: block;
   max-width: 100%;
 }
+
 body {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
@@ -31,43 +35,54 @@ body {
   overflow-y: scroll;
   position: relative;
 }
+
 .container {
   width: 83%;
   margin: auto;
 }
+
 .tittle {
   font-weight: 700;
 }
+
 a {
   text-decoration: none;
 }
+
 li {
   list-style: none;
 }
+
 .head {
   box-shadow: 4px 2px 5px 0px #888888;
 }
+
 header a {
   color: var(--pure);
 }
+
 header {
   background-color: var(--secondary-color);
   color: var(--pure);
 }
+
 header .container {
   display: flex;
   padding: 15px 0;
   justify-content: space-between;
   gap: 20px;
 }
+
 header ul li,
 header .headerIcons i {
   display: inline;
   padding: 5px;
 }
+
 .headerLogs i {
   margin-right: 5px;
 }
+
 .body .bs-header .container .info {
   display: flex;
   justify-content: space-between;
@@ -75,82 +90,101 @@ header .headerIcons i {
   align-items: center;
   margin: 20px 0;
 }
+
 .info a {
   color: var(--secondary-color);
 }
+
 .call-sec .call-link {
   font-weight: bold;
 }
+
 .bs-header .container .call-sec,
 .work-sec {
   display: flex;
   align-items: center;
   gap: 12px;
 }
+
 .bs-header i {
   font-size: 25px;
 }
+
 .work-sec div:first-child h3 {
   font-weight: bold;
 }
+
 .work-sec div:last-child h4 {
   font-weight: 500;
   color: var(--ternary);
 }
+
 .fa-clock,
 .fa-phone {
   font-weight: 900;
   color: var(--primary-color);
 }
+
 .work-sec div:first-child,
 .call-sec div:first-child {
   margin-bottom: 5px;
 }
+
 .nav-bar {
   margin-top: 35px;
 }
+
 .nav-bar nav ul {
   display: flex;
   align-items: center;
   gap: 20px;
   justify-content: center;
 }
+
 .nav-bar nav ul li a {
   padding: 15px;
   display: block;
   transition: 0.3s;
   font-weight: 700;
 }
+
 .nav-bar nav ul li a:hover {
   background-color: var(--primary-color);
   color: var(--pure);
 }
+
 .nav-trigger svg {
   transform: rotate(90deg);
   transform: rotate(90deg);
   cursor: pointer;
   transition: 0.3s;
 }
+
 .nav-trigger svg:hover {
   color: var(--primary-color);
 }
+
 body .main-head {
   display: none;
   height: 100vh;
   width: 100vw;
   box-shadow: none;
 }
+
 body .main-head .bs-header .container {
   width: 100%;
 }
+
 body .main-head .container .nav-bar {
   margin: 5px 0 10px;
 }
+
 body .main-head .container .nav-bar ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+
 body .main-head .container .info {
   display: flex;
   flex-direction: column;
@@ -158,10 +192,12 @@ body .main-head .container .info {
   align-items: flex-start;
   padding-left: 15px;
 }
+
 body .main-head .container .info a,
 body .main-head .container .info h4 {
   font-size: 0.8em;
 }
+
 @media (max-width: 950px) {
   .body {
     height: 75%;
@@ -173,30 +209,37 @@ body .main-head .container .info h4 {
     background-color: red;
     box-shadow: 0 3px 10px 0 var(--secondary);
   }
+
   .body .head {
     display: none;
   }
+
   body .main-head {
     display: block;
   }
+
   /* media queiry for about-fresh-meal-sec */
   .about-fresh-meal-sec .container {
     flex-flow: column nowrap;
     gap: 1em;
   }
+
   .container {
     width: 90%;
   }
+
   .about-sec-img img {
     width: 90%;
     margin: auto;
   }
 }
+
 @media (max-width: 450px) {
   .body {
     right: -38%;
   }
 }
+
 /* top products sec */
 .top-products-sec {
   width: 100%;
@@ -207,6 +250,7 @@ body .main-head .container .info h4 {
   align-items: center;
   gap: 20px;
 }
+
 .top-products-header,
 .about-sec-header {
   width: 100%;
@@ -214,6 +258,7 @@ body .main-head .container .info h4 {
   font-size: 1.5em;
   margin-top: 1.5em;
 }
+
 .top-products-header::after,
 .about-sec-header::after {
   content: "";
@@ -225,6 +270,7 @@ body .main-head .container .info h4 {
   background-position: center;
   margin-top: 10px;
 }
+
 .carousel-cell {
   margin: 0 1.8em;
   border-radius: 10px;
@@ -233,15 +279,23 @@ body .main-head .container .info h4 {
   gap: 1.5em;
   background-color: #b5b5b526;
 }
+
 .carousel-cell.is-selected {
   background: var(--pure);
 }
+
+.carousel-cell .plate-img img {
+  width: 190px;
+  height: 188px;
+}
+
 .carousel-cell .plate-img {
   padding: 20px 30px;
   display: flex;
   justify-content: center;
   border-bottom: 2px solid var(--light);
 }
+
 .carousel-cell .plate-info {
   display: flex;
   flex-flow: column nowrap;
@@ -251,6 +305,7 @@ body .main-head .container .info h4 {
   /* margin-bottom: 12px;
 	*/
 }
+
 .carousel-cell .plate-carte-div {
   display: flex;
   align-items: center;
@@ -258,30 +313,37 @@ body .main-head .container .info h4 {
   border: 1px solid var(--primary-color);
   padding-right: 10px;
 }
+
 .plate-price {
   font-weight: 550;
   color: var(--danger);
 }
+
 .carousel-cell .plate-carte-div div i {
   background-color: var(--primary-color);
   color: var(--heaven);
   padding: 5px;
 }
+
 .carousel-cell .plate-info .plate-name {
   font-size: 1.3rem;
 }
+
 .carousel-cell .plate-info .add-to-cart-div {
   cursor: pointer;
   transition: 0.1s ease;
 }
+
 .carousel-cell .plate-info .plate-carte-div:hover {
   background-color: var(--primary-color);
   color: var(--pure);
 }
+
 .plate-rating {
   display: flex;
   gap: 0.5em;
 }
+
 .secondary-button {
   cursor: pointer;
   border: 1px solid var(--secondary-color);
@@ -294,52 +356,63 @@ body .main-head .container .info h4 {
   margin-top: 1.2em;
   font-weight: 600;
 }
+
 .secondary-button:hover {
   background-color: var(--heaven);
   color: var(--secondary-color);
 }
+
 /* smaller, dark, rounded square */
 .flickity-button {
   background: var(--primary-color);
 }
+
 .flickity-button:hover {
   background: var(--secondary-color);
 }
+
 .flickity-prev-next-button {
   width: 30px;
   height: 30px;
   border-radius: 5px;
 }
+
 /* icon color */
 .flickity-button-icon {
   fill: white;
 }
+
 /* About Fresh Meal sec */
 .about-fresh-meal-sec {
   background-color: var(--pure);
   padding: 2.5em 0;
 }
+
 .about-fresh-meal-sec .container {
   display: flex;
   gap: 1.5em;
   align-items: center;
   margin-top: 2em;
 }
+
 .about-sec-img {
   flex: 1;
   display: flex;
   justify-content: center;
 }
+
 .about-sec-info {
   padding: 2em 0;
   flex: 1;
 }
+
 .about-sec-info h2 {
   font-size: 1.4rem;
   color: var(--secondary-color);
   line-height: 1.3;
   margin-bottom: 1em;
 }
+
 .about-sec-info p {
   line-height: 1.7;
   margin-bottom: 4rem;
